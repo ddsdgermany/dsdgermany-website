@@ -1,56 +1,54 @@
-const features = [
-  {
-    title: "Deneyimli Danışmanlık",
-    text: "Adayların başvuru sürecinden Almanya'da işe başlayana kadar her aşamada destek sağlıyoruz.",
-  },
-  {
-    title: "Güvenilir İşveren Ağı",
-    text: "Hastaneler, bakım merkezleri, lojistik firmaları ve teknik sektörlerde güvenilir iş ortaklarımızla çalışıyoruz.",
-  },
-  {
-    title: "Vize ve Denklik Desteği",
-    text: "Denklik, çalışma izni, vize ve resmi evrak süreçlerinde profesyonel danışmanlık sunuyoruz.",
-  },
-  {
-    title: "Sürekli İletişim",
-    text: "WhatsApp, telefon ve e-posta üzerinden süreç boyunca hızlı ve düzenli iletişim sağlıyoruz.",
-  },
-];
-
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-blue-950 text-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-yellow-400 font-semibold mb-3">
-            Neden DSD Germany?
-          </p>
+    <section className="bg-blue-700 text-white py-20 px-8">
+      <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">
-            Almanya Kariyer Yolculuğunuzda Güvenilir Çözüm Ortağınız
-          </h2>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Neden DSD Germany?
+        </h2>
 
-          <p className="text-blue-100 max-w-3xl mx-auto text-lg">
-            Her adayın hedefi farklıdır. Bu nedenle tüm süreci size özel planlıyor
-            ve Almanya'daki kariyer hedefinize ulaşmanız için yanınızda oluyoruz.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-4 gap-8">
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white/10 border border-white/20 rounded-3xl p-8 backdrop-blur-sm"
-            >
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">
-                ✓ {item.title}
-              </h3>
+          <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-lg">
+            <h3 className="text-xl font-bold mb-3">
+              🇩🇪 Güvenilir İşverenler
+            </h3>
 
-              <p className="text-blue-100 leading-7">
-                {item.text}
-              </p>
-            </div>
-          ))}
+            <p>
+              Almanya'daki güvenilir hastane ve firmalarla çalışıyoruz.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-lg">
+            <h3 className="text-xl font-bold mb-3">
+              📄 Evrak Desteği
+            </h3>
+
+            <p>
+              Vize, denklik ve tüm resmi işlemlerde destek sağlıyoruz.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-lg">
+            <h3 className="text-xl font-bold mb-3">
+              🏠 Konaklama
+            </h3>
+
+            <p>
+              İşe başlamadan önce konaklama konusunda yardımcı oluyoruz.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-lg">
+            <h3 className="text-xl font-bold mb-3">
+              🤝 Sürekli Destek
+            </h3>
+
+            <p>
+              Almanya'ya geldikten sonra da adaylarımızın yanındayız.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

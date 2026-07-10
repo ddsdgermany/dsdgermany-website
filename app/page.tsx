@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
 import Services from "./components/Services";
-import WhyUs from "./components/WhyUs";
 import Process from "./components/Process";
+import WhyUs from "./components/WhyUs";
+import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -13,27 +13,17 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
-      <WhatsAppButton />
-
       <Navbar />
-
       <Hero />
-
-      <Stats />
-
       <Services />
-
-      <WhyUs />
-
       <Process />
-
+      <WhyUs />
+      <Stats />
       <Testimonials />
-
       <FAQ />
-
       <Contact />
-
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
