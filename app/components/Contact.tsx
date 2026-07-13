@@ -1,63 +1,123 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
-    <section id="iletisim" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="text-4xl font-bold text-blue-950 mb-6">
-            Başvuru ve İletişim
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-blue-950 to-blue-800 py-24 text-white"
+    >
+      <div className="mx-auto max-w-7xl px-6">
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mb-14 text-center"
+        >
+          <h2 className="mb-4 text-5xl font-bold">
+            Almanya Başvuru Formu
           </h2>
 
-          <p className="text-gray-600 text-lg mb-8">
-            Almanya’da iş veya Ausbildung fırsatları için bilgilerinizi gönderin.
-            Size en kısa sürede dönüş yapalım.
+          <p className="mx-auto max-w-3xl text-xl text-blue-100">
+            Bilgilerinizi doldurun. Ekibimiz başvurunuzu inceleyerek sizinle
+            en kısa sürede iletişime geçecektir.
           </p>
+        </motion.div>
 
-          <div className="space-y-4 text-gray-700">
-            <p>📞 Telefon: +90 555 034 16 17</p>
-            <p>💬 WhatsApp: +90 555 034 16 17</p>
-            <p>📧 E-posta: info@dsdgermany.de</p>
-            <p>📧 Destek: support@dsdgermany.de</p>
-            <p>📍 Türkiye / Almanya</p>
-          </div>
-        </div>
-
-        <form
-          className="bg-gray-50 p-8 rounded-3xl shadow space-y-5"
-          onSubmit={(e) => {
-            e.preventDefault();
-            window.open(
-              "https://wa.me/905550341617?text=Merhaba%20DSD%20Germany,%20başvuru%20yapmak%20istiyorum.",
-              "_blank"
-            );
-          }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="rounded-3xl bg-white p-10 shadow-2xl"
         >
-          <input type="text" placeholder="Ad Soyad" className="w-full border border-gray-300 rounded-xl p-4" />
-          <input type="email" placeholder="E-posta" className="w-full border border-gray-300 rounded-xl p-4" />
-          <input type="tel" placeholder="Telefon / WhatsApp" className="w-full border border-gray-300 rounded-xl p-4" />
 
-          <select className="w-full border border-gray-300 rounded-xl p-4 text-gray-500">
-            <option>İlgilendiğiniz hizmet</option>
-            <option>Sağlık Personeli</option>
-            <option>Lojistik ve Şoförlük</option>
-            <option>Teknik Meslekler</option>
-            <option>Ausbildung</option>
-          </select>
+          <form className="grid gap-6 md:grid-cols-2">
 
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">
-              CV Yükle
-            </label>
-            <input type="file" accept=".pdf,.doc,.docx" className="w-full border border-gray-300 rounded-xl p-4 bg-white" />
-          </div>
+            <input
+              type="text"
+              placeholder="Ad Soyad"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
 
-          <textarea placeholder="Mesajınız" rows={5} className="w-full border border-gray-300 rounded-xl p-4"></textarea>
+            <input
+              type="tel"
+              placeholder="Telefon"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
 
-          <button type="submit" className="w-full bg-blue-700 text-white font-semibold py-4 rounded-xl hover:bg-blue-800 transition">
-            WhatsApp ile Başvuru Gönder
-          </button>
-        </form>
+            <input
+              type="email"
+              placeholder="E-posta"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
+
+            <input
+              type="text"
+              placeholder="Ülke"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
+
+            <input
+              type="text"
+              placeholder="Meslek"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
+
+            <select className="rounded-xl border p-4 text-black">
+              <option>Almanca Seviyesi</option>
+              <option>A1</option>
+              <option>A2</option>
+              <option>B1</option>
+              <option>B2</option>
+              <option>C1</option>
+              <option>C2</option>
+            </select>
+
+            <select className="rounded-xl border p-4 text-black">
+              <option>Denklik Durumu</option>
+              <option>Başlamadım</option>
+              <option>Devam Ediyor</option>
+              <option>Tamamlandı</option>
+            </select>
+
+            <input
+              type="number"
+              placeholder="Mesleki Deneyim (Yıl)"
+              className="rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
+
+            <div className="md:col-span-2">
+              <label className="mb-2 block font-semibold text-gray-700">
+                CV Yükle (PDF / DOCX)
+              </label>
+
+              <input
+                type="file"
+                className="w-full rounded-xl border p-4 text-black"
+              />
+            </div>
+
+            <textarea
+              rows={6}
+              placeholder="Eklemek istediğiniz not..."
+              className="md:col-span-2 rounded-xl border p-4 text-black outline-none focus:border-blue-600"
+            />
+
+            <button
+              type="submit"
+              className="md:col-span-2 rounded-2xl bg-gradient-to-r from-blue-700 to-blue-900 py-5 text-xl font-bold text-white transition hover:scale-[1.02]"
+            >
+              🚀 Başvuruyu Gönder
+            </button>
+
+          </form>
+
+        </motion.div>
+
       </div>
     </section>
   );
