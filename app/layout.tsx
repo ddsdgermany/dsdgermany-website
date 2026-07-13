@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dsdgermany-website.vercel.app"),
   title: {
+   <meta name="google-site-verification" content="9dnGd7BCXP5ca6nu1_8ZhEu93uPD-eb-zj7o7gue2CE" /> 
 
 
     default: "DSD Germany | Almanya İş ve Kariyer Danışmanlığı",
